@@ -9,8 +9,6 @@
 # Offizielles Nginx-Image verwenden
 FROM nginxinc/nginx-unprivileged
 # Standard-Nginx-Verzeichnis setzen
-WORKDIR /usr/share/nginx/html
+WORKDIR /app/web
 # HTML-Dateien ins Container-Image kopieren (dies überschreibt alle existierenden Dateien)
 COPY . .
-
- 
