@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: html-docker-app
+  labels:
+    app: html-docker-app
+    app.kubernetes.io/part-of: html-docker-app
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+  selector:
+    app: html-docker-app
