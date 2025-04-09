@@ -27,8 +27,9 @@ spec:
     git:
       uri: https://github.com/Viperleo625/aufgabe-6-2.git
       contextDir: /app/web
-  sourceSecret: {}
-triggers: 
+    sourceSecret:
+      name: html-openshift-app
+  triggers:
     - type: Generic
       generic: 
         secretReference:
@@ -36,4 +37,4 @@ triggers:
     - type: ImageChange
       imageChange: {}
     - type: ConfigChange
-  runPolicy: Serial
+  runPolicy: Serial
