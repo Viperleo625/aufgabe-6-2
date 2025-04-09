@@ -25,6 +25,6 @@ spec:
   source:
     type: Git
     git:
-      uri: 'https://github.com/benschwarz1982/html-openshift-app-loesung.git'
+      uri: https://github.com/Viperleo625/aufgabe-6-2.git
       contextDir: /app/web
   sourceSecret: {}
