@@ -1,0 +1,25 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: html-docker-app
+  labels:
+    app: html-docker-app
+    app.kubernetes.io/part-of: html-docker-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: html-docker-app
+  template:
+    metadata:
+      labels:
+        app: html-docker-app
+    spec:
+      containers:
+      - name: html-docker-app
+        image: ghcr.io/viperleo625/html-docker-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
